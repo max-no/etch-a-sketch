@@ -4,6 +4,8 @@ buildGrid(16);
 
 const slider = document.querySelector('#user-input');
 const displayValue = document.querySelector('#slider-value');
+const prideToggle = document.querySelector('#prideToggle');
+const opacityToggle = document.querySelector('#opacityToggle');
 
 //user setup
 slider.addEventListener('input', () => {
@@ -32,16 +34,24 @@ function buildGrid(squaresPerSide) {
   let squares = document.querySelectorAll('.square');
   squares.forEach((square) => {
     square.addEventListener('mouseenter', () => {
-      square.style.backgroundColor = 'black';
+      if (prideToggle.checked) {
+        square.style.backgroundColor = rainbowColor();
+      }
+      if (!prideToggle.checked) square.style.backgroundColor = 'black';
+      if (opacityToggle.checked) {
+        +square.style.opacity === 1
+          ? (square.style.opacity = 1)
+          : (square.style.opacity = +square.style.opacity + 0.1);
+      }
     });
   });
 }
 
-/*
-Create a webpage with a 16x16 grid of square divs.
+function rainbowColor() {
+  const R = Math.floor(Math.random() * 256);
+  const G = Math.floor(Math.random() * 256);
+  const B = Math.floor(Math.random() * 256);
+  return `rgb(${R}, ${G}, ${B})`;
+}
 
-Create the divs using JavaScript. Don’t try to create them by hand by copying and pasting them in your HTML file!
-It’s best to put your grid squares inside a “container” div. This div can be written in your HTML file.
-Use Flexbox to make the divs appear as a grid (versus just one on each line). Despite the name, do not be tempted to research or use CSS Grid, as it will be taught in a later lesson after the foundations path. This project is an opportunity specifically to practice Flexbox!
-Be careful with borders and margins, as they can adjust the size of the squares!
-*/
+

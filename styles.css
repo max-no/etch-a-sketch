@@ -1,24 +1,67 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.setup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+#top-setup {
+  margin: 0 0 12px 0;
+  flex: 1;
+}
+
+#slider-value {
+  text-align: center;
+}
+
+#user-input {
+  width: 300px;
+}
+
+#instruction {
+  text-align: center;
+  margin: 0 0 12px 0;
+  font-size: 28px;
+  font-weight: 1000;
 }
 
 .container {
-    display: flex;
-    border: 1px solid black;
-    width: 600px;
-    height: 600px;
-    flex-wrap: wrap;
+  display: flex;
+  border: 1px solid black;
+  width: 600px;
+  height: 600px;
+  flex-wrap: wrap;
 }
 
+#footer {
+  margin-top: auto;
+  padding-bottom: 12px;
+  text-align: center;
+}
 
-
-#user-input {
-    width: 250px;
+#footer a {
+  text-decoration: none;
+  color: red;
 }

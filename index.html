@@ -5,13 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-sketch</title>
     <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="setup">
-        <input type="range" id="user-input" min="16" max="100" step="1" value="16">
-        <span id="slider-value">16 squares per side</span>
+    <div class="main-content">
+      <div>
+        <div id="instruction">DRAW!</div>
+        <div class="container"></div>
+      </div>
+      <div class="setup">
+        <div id="top-setup">
+          <div id="slider-value">16 squares per side</div>
+          <input
+            type="range"
+            id="user-input"
+            min="16"
+            max="100"
+            step="1"
+            value="16"
+          />
+        </div>
+        <div class="bottom-setup">
+          <input type="checkbox" id="prideToggle" />
+          <label for="prideToggle">Random Colors</label>
+          <input type="checkbox" id="opacityToggle" />
+          <label for="opacityToggle">Increasing Opacity</label>
+        </div>
+      </div>
     </div>
-    <div class="container"></div>
+    <div id="footer">
+      Copyright © <a href="https://github.com/max-no">max-no</a> 2025
+    </div>
   </body>
 </html>
