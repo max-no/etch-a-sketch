@@ -32,6 +32,14 @@ body {
   flex: 1;
 }
 
+#very-bottom-setup {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
 #bottom-setup {
     padding-bottom: 32px;
 }
@@ -56,6 +64,7 @@ body {
     background: none;
     border: 2px solid black;
     cursor: pointer;
+    margin-left: auto;
 }
 
 .container {

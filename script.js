@@ -6,6 +6,7 @@ const slider = document.querySelector('#user-input');
 const displayValue = document.querySelector('#slider-value');
 const prideToggle = document.querySelector('#prideToggle');
 const opacityToggle = document.querySelector('#opacityToggle');
+const favoriteColor = document.querySelector('#favoriteColor');
 const resetButton = document.querySelector('#reset');
 resetButton.addEventListener('click', () => buildGrid(slider.value));
 let mouseDownCheck = false;
@@ -43,7 +44,7 @@ function buildGrid(squaresPerSide) {
       if (prideToggle.checked) {
         square.style.backgroundColor = rainbowColor();
       }
-      if (!prideToggle.checked) square.style.backgroundColor = 'black';
+      if (!prideToggle.checked) square.style.backgroundColor = favoriteColor.value;
       if (opacityToggle.checked) {
         +square.style.opacity === 1
           ? (square.style.opacity = 1)
@@ -62,7 +63,7 @@ function buildGrid(squaresPerSide) {
       if (prideToggle.checked) {
         square.style.backgroundColor = rainbowColor();
       }
-      if (!prideToggle.checked) square.style.backgroundColor = 'black';
+      if (!prideToggle.checked) square.style.backgroundColor = favoriteColor.value;
       if (opacityToggle.checked) {
         +square.style.opacity === 1
           ? (square.style.opacity = 1)
@@ -75,7 +76,7 @@ function buildGrid(squaresPerSide) {
       if (prideToggle.checked) {
         square.style.backgroundColor = rainbowColor();
       }
-      if (!prideToggle.checked) square.style.backgroundColor = 'black';
+      if (!prideToggle.checked) square.style.backgroundColor = favoriteColor.value;
       if (opacityToggle.checked) {
         +square.style.opacity === 1
           ? (square.style.opacity = 1)
